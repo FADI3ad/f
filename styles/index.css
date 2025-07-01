@@ -1,0 +1,144 @@
+
+
+
+/* Navbar */
+.top-navbar {
+
+  background-color: #413d62;
+  display: flex;
+  justify-content: center;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: #aaa;
+}
+
+
+
+.nav-links a {
+  font-size: 18px;
+}
+
+
+.nav-links a:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #413d62;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Note Box */
+.note-box textarea {
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  padding: 15px;
+  font-size: 16px;
+  resize: vertical;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .head h1 {
+    font-size: 28px;
+  }
+}
+
+/* الصندوق الرئيسي المحيط */
+.content-box {
+  background-color: #e8e9f0; /* خلفية أغمق شوية */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.verse-box {
+  border: 2px solid #87ceeb; /* الأزرق السماوي */
+  border-radius: 12px;
+  padding: 20px;
+  /* background-color: black; */
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.verse-box .verse-ref {
+  font-style: italic;
+  color: #0b469f;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .verse-box {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .verse-box .verse-ref {
+    font-size: 14px;
+  }
+}
+
+
+
