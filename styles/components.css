@@ -48,7 +48,7 @@ h5 {
 
 p {
     font-size: clamp(12px, 2vw, 20px);
-    color: #1F5EFF;
+    color: black;
 }
 a{
     font-size: clamp(8px, 2vw, 16px);
@@ -284,5 +284,16 @@ label{
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  color: black;
+  border-top: 1px solid #ddd;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
