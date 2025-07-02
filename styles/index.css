@@ -1,29 +1,68 @@
 
+.head h1 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #2e2e3a;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  animation: fadeSlideDown 0.7s ease-in-out;
+}
 
-
-/* Navbar */
-.top-navbar {
-
+.head h1::after {
+  content: '';
+  width: 60px;
+  height: 4px;
   background-color: #413d62;
-  display: flex;
-  justify-content: center;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  color: #aaa;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* Animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive H1 */
+@media (max-width: 600px) {
+  .head h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .head h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 300px) {
+  .head h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 250px) {
+  .head h1 {
+    font-size: 18px;
+  }
 }
 
 
 
-.nav-links a {
-  font-size: 18px;
-}
 
 
-.nav-links a:hover {
-  color: white;
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-}
 
 
 
@@ -37,22 +76,30 @@
 }
 
 /* Search Box */
-.search-box {
+.CF-box {
   display: flex;
   width: 100%;
   max-width: 500px;
   gap: 10px;
+  animation: slideIn 0.6s ease-out;
 }
 
-.search-box input {
+.CF-box input {
   flex: 1;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #aaa;
   border-radius: 6px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.search-box button {
+.CF-box input:focus {
+  outline: none;
+  border-color: #413d62;
+  box-shadow: 0 0 8px rgba(65, 61, 98, 0.4);
+}
+
+.CF-box button {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #413d62;
@@ -60,23 +107,63 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.search-box button:hover {
-  background-color: #0056b3;
+.CF-box button:hover {
+  background-color: #5a5591;
+  transform: scale(1.05);
 }
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .CF-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .CF-box button {
+    width: 100%;
+  }
+
+  .head h1 {
+    font-size: 28px;
+  }
+}
+
+
 
 /* Note Box */
 .note-box textarea {
   width: 100%;
   max-width: 500px;
   min-height: 150px;
-  padding: 15px;
+  padding: 15px 18px;
   font-size: 16px;
-  resize: vertical;
   border: 1px solid #aaa;
-  border-radius: 6px;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.note-box textarea:focus {
+  outline: none;
+  border-color: #413d62;
+  box-shadow: 0 0 8px rgba(65, 61, 98, 0.2);
+  background-color: #fdfdff;
 }
 
 /* Responsive */
@@ -96,7 +183,7 @@
 
 /* الصندوق الرئيسي المحيط */
 .content-box {
-  background-color: #e8e9f0; /* خلفية أغمق شوية */
+  background-color: #e8e9f0;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -105,34 +192,59 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  animation: fadeInUp 0.7s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
 
 .verse-box {
-  border: 2px solid #87ceeb; /* الأزرق السماوي */
-  border-radius: 12px;
-  padding: 20px;
-  /* background-color: black; */
+  border: none;
+  border-radius: 10px;
+  padding: 25px;
   text-align: center;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #333;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #000; /* اللون الأسود */
   max-width: 600px;
-  margin-top: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #f8f9fc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  animation: fadeInUp 0.7s ease;
 }
 
 .verse-box .verse-ref {
-  font-style: italic;
-  color: #0b469f;
+  display: block;
+  margin-top: 10px;
   font-size: 16px;
+  color: #222;
+  font-style: italic;
 }
 
+/* Responsive تحسين */
 @media (max-width: 480px) {
   .verse-box {
-    font-size: 16px;
-    padding: 15px;
+    font-size: 17px;
+    padding: 20px 15px;
   }
 
   .verse-box .verse-ref {
