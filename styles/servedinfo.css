@@ -1,0 +1,135 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.top-navbar {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto 0; /* نزلناها شوية من فوق */
+  padding: 15px 30px;
+  
+  background-color: #413d62;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.top-navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.nav-links a i {
+  margin-right: 8px;
+  color: aliceblue;
+}
+
+.nav-links a:hover {
+  color: #0e6eae;
+}
+
+
+
+@media (max-width: 480px) {
+  .verse-box {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .verse-box .verse-ref {
+    font-size: 14px;
+  }
+}
+
+/* Profile Section */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #ffffff;
+  padding: 60px 40px;  /* زودنا البادينج هنا */
+  margin: 70px auto;
+  border-radius: 25px;
+  width: 95%;
+  max-width: 1100px;
+  min-height: 500px;  /* ارتفاع أكبر */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
+  background-image: linear-gradient(to right top, #fdfdfd, #f5f4fa); /* لمسة خلفية ناعمة */
+}
+
+
+.profile-image img {
+  width: 250px;      /* حجم أكبر */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #413d62;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-info p {
+  margin-bottom: 14px;
+  font-size: clamp(16px, 2vw, 22px);
+  color: #333;
+  line-height: 1.5;
+}
+
+
+.profile-info strong {
+  color: #413d62;
+  font-size: clamp(17px, 2.2vw, 24px);
+}
+
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    padding: 30px;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-info p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+  }
+  .profile-info p {
+    font-size: 16px;
+  }
+}
