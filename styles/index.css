@@ -1,254 +1,81 @@
 
-.head h1 {
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
-  color: #1F5EFF;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-  position: relative;
-  font-family: 'Poppins', sans-serif;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-  animation: fadeSlideDown 0.7s ease-in-out;
-}
 
-.head h1::after {
-  content: '';
-  width: 60px;
-  height: 4px;
-  background-color: #413d62;
-  display: block;
-  margin: 12px auto 0;
-  border-radius: 4px;
-}
+    .content-box {
+      background-color: white;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    }
 
-/* Animation */
-@keyframes fadeSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .content-box h1 {
+      color: black;
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+    }
 
-/* Responsive H1 */
-@media (max-width: 600px) {
-  .head h1 {
-    font-size: 30px;
-  }
-}
+    .content-box h1::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #ccc;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
 
-@media (max-width: 400px) {
-  .head h1 {
-    font-size: 24px;
-  }
-}
+    .CF-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 25px 0 10px;
+    }
 
-@media (max-width: 300px) {
-  .head h1 {
-    font-size: 20px;
-  }
-}
+    .CF-box input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      flex: 1;
+    }
 
-@media (max-width: 250px) {
-  .head h1 {
-    font-size: 18px;
-  }
-}
+    .CF-box button {
+      background-color: #1F5EFF;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
 
+    .CF-box button:hover {
+      background-color: #336CFF;
+    }
 
+    .description {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 20px;
+    }
 
+    .chart-container {
+      height: 300px;
+      margin-bottom: 20px;
+    }
 
+    .verse-text {
+      text-align: center;
+      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-
-
-
-
-.centered-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
-}
-
-/* Search Box */
-.CF-box {
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-  gap: 10px;
-  animation: slideIn 0.6s ease-out;
-}
-
-.CF-box input {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.CF-box input:focus {
-  outline: none;
-  border-color: #413d62;
-  box-shadow: 0 0 8px rgba(65, 61, 98, 0.4);
-}
-
-.CF-box button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #413d62;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.CF-box button:hover {
-  background-color: #5a5591;
-  transform: scale(1.05);
-}
-
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Responsive */
-@media (max-width: 600px) {
-  .CF-box {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .CF-box button {
-    width: 100%;
-  }
-
-  .head h1 {
-    font-size: 28px;
-  }
-}
-
-
-
-/* Note Box */
-.note-box textarea {
-  width: 100%;
-  max-width: 500px;
-  min-height: 150px;
-  padding: 15px 18px;
-  font-size: 16px;
-  border: 1px solid #aaa;
-  border-radius: 8px;
-  resize: vertical;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.note-box textarea:focus {
-  outline: none;
-  border-color: #413d62;
-  box-shadow: 0 0 8px rgba(65, 61, 98, 0.2);
-  background-color: #fdfdff;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .search-box {
-    flex-direction: column;
-  }
-
-  .search-box button {
-    width: 100%;
-  }
-
-  .head h1 {
-    font-size: 28px;
-  }
-}
-
-/* الصندوق الرئيسي المحيط */
-.content-box {
-  background-color: #e8e9f0;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  animation: fadeInUp 0.7s ease;
-  transition: box-shadow 0.3s ease;
-}
-
-.content-box:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-.verse-text {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.8;
-  color: #000;
-
-  padding: 20px;
-
-  border-radius: 10px;
-
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.verse-text .verse-ref {
-  display: block;
-  font-size: 16px;
-  color: #444;
-  font-style: italic;
-  margin-bottom: 8px;
-}
-
-
-
-.chart-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  height: 300px; /* مهم عشان maintainAspectRatio=false */
-}
-
-@media (max-width: 480px) {
-  .chart-container {
-    max-width: 100%;
-    height: 250px;
-  }
-}
+    .verse-text span {
+      font-style: italic;
+      font-size: 14px;
+      color: #666;
+    }
