@@ -79,10 +79,10 @@
       datasets: [{
         data: [24, 12, 19, 1],
         backgroundColor: [
-          '#413d62',
-          '#5a5591',
-          '#87ceeb',
-          '#9ad0f5'
+          '#FF6384', // وردي زاهي
+          '#36A2EB', // أزرق زاهي
+          '#FFCE56', // أصفر ساطع
+          '#4BC0C0'  // تركواز
         ],
         borderColor: '#ffffff',
         borderWidth: 2
@@ -90,6 +90,7 @@
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false, // ده بيخليها تمتد حسب المساحة المتاحة
       plugins: {
         legend: {
           position: 'bottom',
@@ -98,7 +99,8 @@
             font: {
               family: 'Poppins',
               size: 14
-            }
+            },
+            padding: 15
           }
         },
         tooltip: {
@@ -109,6 +111,12 @@
               return `${label}: ${value}`;
             }
           }
+        }
+      },
+      layout: {
+        padding: {
+          top: 10,
+          bottom: 10
         }
       }
     }

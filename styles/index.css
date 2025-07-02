@@ -240,8 +240,15 @@
 
 
 .chart-container {
-  width: 20%;
+  width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px 0;
+  height: 300px; /* مهم عشان maintainAspectRatio=false */
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    max-width: 100%;
+    height: 250px;
+  }
 }
