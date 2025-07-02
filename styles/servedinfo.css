@@ -1,135 +1,92 @@
-* {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: border-box;
+body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right, #f3f4f7, #e4e6ec);
+  color: #333;
 }
 
 /* Navbar */
 .top-navbar {
-  width: 90%;
-  max-width: 1100px;
-  margin: 30px auto 0; /* نزلناها شوية من فوق */
-  padding: 15px 30px;
-  
   background-color: #413d62;
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  
+  color: white;
   display: flex;
   justify-content: space-between;
+  padding: 15px 30px;
   align-items: center;
-  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.top-navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .nav-links a {
   color: white;
-  text-decoration: none;
   margin-left: 20px;
-  font-size: 18px;
-  display: inline-flex;
-  align-items: center;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 
-.nav-links a i {
-  margin-right: 8px;
-  color: aliceblue;
-}
-
 .nav-links a:hover {
-  color: #0e6eae;
+  color: #ffd369;
 }
 
-
-
-@media (max-width: 480px) {
-  .verse-box {
-    font-size: 16px;
-    padding: 15px;
-  }
-
-  .verse-box .verse-ref {
-    font-size: 14px;
-  }
-}
-
-/* Profile Section */
+/* Profile Container */
 .profile-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  background-color: #ffffff;
-  padding: 60px 40px;  /* زودنا البادينج هنا */
-  margin: 70px auto;
-  border-radius: 25px;
-  width: 95%;
-  max-width: 1100px;
-  min-height: 500px;  /* ارتفاع أكبر */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  flex-wrap: wrap;
-  background-image: linear-gradient(to right top, #fdfdfd, #f5f4fa); /* لمسة خلفية ناعمة */
+  max-width: 750px;
+  background: #ffffff;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
+.profile-container:hover {
+  transform: translateY(-5px);
+}
 
 .profile-image img {
-  width: 250px;      /* حجم أكبر */
-  height: 250px;
-  object-fit: cover;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 5px solid #413d62;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s;
 }
 
+.profile-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Info List */
 .profile-info {
-  flex: 1;
-  min-width: 300px;
+  margin-top: 30px;
+  text-align: left;
 }
 
 .profile-info p {
-  margin-bottom: 14px;
-  font-size: clamp(16px, 2vw, 22px);
-  color: #333;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
 }
-
 
 .profile-info strong {
-  color: #413d62;
-  font-size: clamp(17px, 2.2vw, 24px);
+  width: 150px;
+  color: #222;
+  font-weight: 600;
 }
 
-
-/* Responsive for small screens */
-@media (max-width: 768px) {
-  .profile-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 95%;
-    padding: 30px;
-  }
-
-  .profile-image img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .profile-info p {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-image img {
-    width: 150px;
-    height: 150px;
-  }
-  .profile-info p {
-    font-size: 16px;
-  }
+.profile-info i {
+  margin-right: 12px;
+  color: #6c63ff;
+  min-width: 25px;
 }
