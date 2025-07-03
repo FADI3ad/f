@@ -217,13 +217,17 @@ label{
 /*-----NAVBAR SECTION-----*/
 
 .top-navbar {
-   background-color: #413d62;
+  background-color: #413d62;
   display: flex;
   justify-content: center;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   color: #aaa;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+
 }
+
 .nav-links a {
   font-size: 18px;
 }
